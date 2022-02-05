@@ -25,7 +25,7 @@ contract RPS {
 
     struct Player {
         address payable addr;
-        uint256 playerBetAmount; // 배팅금액
+        uint256 playerBetAmount;
         bytes32 hand;
         PlayerStatus playerStatus;
     }
@@ -144,7 +144,6 @@ contract RPS {
         rooms[roomNum].gameStatus = GameStatus.STATUS_COMPLETE;
     }
 
-    // 가위바위보 상태 복호화
     function decodeHand(bytes32 _hand, address playerAddress)
         private
         pure
